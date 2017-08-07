@@ -1,0 +1,19 @@
+-- Table: public."EMIC_Data"
+
+-- DROP TABLE public."EMIC_Data";
+
+CREATE TABLE public."EMIC_Data"
+(
+    "CASE_ID" character varying COLLATE pg_catalog."default" NOT NULL,
+    "CASE_DT" timestamp without time zone NOT NULL,
+    "COUNTY_N" character varying COLLATE pg_catalog."default",
+    "TOWN_N" character varying COLLATE pg_catalog."default",
+    CONSTRAINT "EMIC_Data_pkey" PRIMARY KEY ("CASE_ID", "CASE_DT")
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public."EMIC_Data"
+    OWNER to postgres;
